@@ -1,12 +1,13 @@
 import { ThemeProvider } from 'styled-components'
 import { defaultTheme } from './styles/theme/default'
 import { GlobalStyles } from './styles/global'
+import { Router } from './Router'
 
 export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyles />
-      <h1>Hello world!</h1>
+      <Router />
     </ThemeProvider>
   )
 }
