@@ -1,3 +1,4 @@
+import { GitHubLink } from '../../components/GitHubLink'
 import {
   HomeContainer,
   InfoGroup,
@@ -15,7 +16,7 @@ export function Home() {
         <div>
           <ProfileHeader>
             <h1>Breno Dias</h1>
-            <a href="">Github</a>
+            <GitHubLink />
           </ProfileHeader>
           <p>
             Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu
@@ -29,11 +30,11 @@ export function Home() {
             </InfoGroup>
             <InfoGroup>
               <FaBuilding size={24} />
-              <span>200</span>
+              <span>Rocketseat</span>
             </InfoGroup>
             <InfoGroup>
               <FaUserGroup size={24} />
-              <span>aa</span>
+              <span>300</span>
             </InfoGroup>
           </ProfileInfo>
         </div>
