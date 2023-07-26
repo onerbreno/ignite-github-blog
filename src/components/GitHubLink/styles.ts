@@ -9,7 +9,6 @@ export const GithubLinkContainer = styled.a`
   text-transform: uppercase;
   gap: 0.5rem;
 
-  color: ${(props) => props.theme.colors.brand.blue};
   border-bottom: 1.5px solid transparent;
 
   span {

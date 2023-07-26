@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const PostItemContainer = styled.li`
   display: flex;
+  max-width: 416px;
   flex-direction: column;
-
   height: 260px;
   padding: 2rem;
   gap: 1.5rem;
@@ -20,6 +20,8 @@ export const PostItemContainer = styled.li`
 
     -webkit-line-clamp: 4;
 
+    color: ${(props) => props.theme.colors.base.text};
+
     font: ${(props) => props.theme.fonts.text.md};
   }
 
@@ -32,11 +34,11 @@ export const PostItemContainer = styled.li`
 
 export const PostHeader = styled.span`
   display: flex;
+  justify-content: space-between;
   align-items: start;
-  gap: 2rem;
+  gap: 1rem;
 
   h3 {
-    color: ${(props) => props.theme.colors.base.title};
     font: ${(props) => props.theme.fonts.title.md};
   }
 

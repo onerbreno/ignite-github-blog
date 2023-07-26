@@ -1,5 +1,5 @@
 import { FaGithub, FaBuilding, FaUserGroup } from 'react-icons/fa6'
-import { GitHubLink } from '../../../components/GitHubLink'
+import { GitHubLink } from '../../../../components/GitHubLink'
 import {
   InfoGroup,
   AuthorCardContainer,
@@ -38,7 +38,7 @@ export function AuthorCard() {
       <div>
         <AuthorCardHeader>
           <h1>{author.name}</h1>
-          <GitHubLink />
+          <GitHubLink content="GitHub" />
         </AuthorCardHeader>
         <p>{author.bio}</p>
         <AuthorCardInfo>

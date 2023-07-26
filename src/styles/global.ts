@@ -21,4 +21,13 @@ export const GlobalStyles = createGlobalStyle`
   body, input, button, textarea {
     font: ${(props) => props.theme.fonts.text.md}
   }
+
+  h1, h2, h3 {
+    color: ${(props) => props.theme.colors.base.title};
+  }
+
+  a { 
+    text-decoration: none;
+    color: ${(props) => props.theme.colors.brand.blue};
+  }
 `

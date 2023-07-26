@@ -6,7 +6,6 @@ export const AuthorCardContainer = styled.section`
   gap: 2rem;
   padding: 2rem;
 
-  margin-top: -5.5rem;
   background: ${(props) => props.theme.colors.base.profile};
   border-radius: 10px;
 
