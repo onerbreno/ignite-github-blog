@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { PostItemContainer, PostHeader } from './styles'
 import { dateFormatter } from '../../../../../Utils/formatter'
-import ReactMarkdown from 'react-markdown'
 
 interface PostIssue {
   id: number
@@ -16,13 +15,13 @@ interface PostProps {
 
 export function PostItem({ post }: PostProps) {
   return (
-    <Link to={`/posts?id=${post.id}`}>
+    <Link to={`posts/${post.id}`}>
       <PostItemContainer>
         <PostHeader>
           <h3>{post.title}</h3>
           <time>{dateFormatter(post.createdAt)}</time>
         </PostHeader>
-        <ReactMarkdown>{post.body}</ReactMarkdown>
+        <p>{post.body}</p>
       </PostItemContainer>
     </Link>
   )

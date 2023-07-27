@@ -9,7 +9,18 @@ import { PostHeaderContainer, PostHeaderLinks, PostInfo } from './styles'
 import { Link } from 'react-router-dom'
 import { InfoGroup } from '../../Home/Components/AuthorCard/styles'
 
-export function PostHeader() {
+interface Header {
+  title: string
+  time: string
+  comments: number
+  user: string
+  repositoryUrl: string
+}
+interface PostHeaderProps {
+  header: Header
+}
+
+export function PostHeader({ header }: PostHeaderProps) {
   return (
     <PostHeaderContainer>
       <PostHeaderLinks>
@@ -17,23 +28,23 @@ export function PostHeader() {
           <FaChevronLeft />
           <span>Voltar</span>
         </Link>
-        <GitHubLink content="Ver no GitHub" />
+        <GitHubLink content="Ver no GitHub" href={header.repositoryUrl} />
       </PostHeaderLinks>
 
-      <h2>JavaScript data types and data structures</h2>
+      <h2>{header.title}</h2>
 
       <PostInfo>
         <InfoGroup>
           <FaGithub size={24} />
-          <span>onerbreno</span>
+          <span>{header.user}</span>
         </InfoGroup>
         <InfoGroup>
           <FaCalendarDay size={24} />
-          <span>Há 1 dia</span>
+          <span>{header.time}</span>
         </InfoGroup>
         <InfoGroup>
           <FaComment size={24} />
-          <span>5 comentários</span>
+          <span>{header.comments} comentários</span>
         </InfoGroup>
       </PostInfo>
     </PostHeaderContainer>

@@ -1,9 +1,13 @@
+import { useFormContext } from 'react-hook-form'
 import { SearchFormContainer, FormHeader } from './styles'
+import { SearchFormInput } from '../..'
 
 interface SearchFormProps {
   postsAmount: number
 }
 export function SearchForm({ postsAmount }: SearchFormProps) {
+  const { register } = useFormContext<SearchFormInput>()
+
   return (
     <SearchFormContainer>
       <fieldset>
@@ -13,13 +17,13 @@ export function SearchForm({ postsAmount }: SearchFormProps) {
             {postsAmount} {postsAmount > 1 ? 'publicações' : 'publicação'}
           </span>
         </FormHeader>
-        <label htmlFor="search">Buscar conteúdo</label>
+        <label htmlFor="query">Buscar conteúdo</label>
         <input
           aria-label="Buscar conteúdo"
           type="text"
           placeholder="Buscar conteúdo"
-          name="search"
-          id="search"
+          id="query"
+          {...register('query')}
         />
       </fieldset>
     </SearchFormContainer>
