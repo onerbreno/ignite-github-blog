@@ -12,7 +12,7 @@ export const PostItemContainer = styled.li`
   background: ${(props) => props.theme.colors.base.post};
   border: 2px solid transparent;
 
-  p {
+  div {
     display: -webkit-box;
     overflow: hidden;
     -webkit-box-orient: vertical;

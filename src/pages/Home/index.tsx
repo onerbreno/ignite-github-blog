@@ -50,8 +50,6 @@ export function Home() {
         GitHubIssueResponse[] | GitHubSearchIssueResponse
       >(url)
 
-      console.log(data)
-
       const responseIsArray = Array.isArray(data)
 
       if (responseIsArray) {
@@ -84,7 +82,6 @@ export function Home() {
     }
   }, [])
 
-  console.log(query)
   useEffect(() => {
     if (debouncedQuery) {
       const url = `search/issues?q=${debouncedQuery}%20repo:onerbreno/ignite-github-blog`

@@ -1,11 +1,13 @@
-// import ReactMarkdown from 'react-markdown'
+import ReactMarkdown from 'react-markdown'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { PostHeader } from './PostHeader'
-import { useParams } from 'react-router-dom'
+import { Navigate, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { githubApi } from '../../services/github'
 import { dateFormatter } from '../../Utils/formatter'
-import ReactMarkdown from 'react-markdown'
+
 import { PostContainer, PostContent } from './styles'
+import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 interface GitHubIssueResponse {
   number: number
@@ -65,6 +67,12 @@ export function Post() {
     if (id) fetchIssue()
   }, [id])
 
+  const isInvalidId = isNaN(Number(id))
+
+  if (isInvalidId) {
+    return <Navigate to="/" replace />
+  }
+
   const postHeader = {
     title: post.title,
     time: post.createdAt,
@@ -77,7 +85,29 @@ export function Post() {
     <PostContainer>
       <PostHeader header={postHeader} />
       <PostContent>
-        <ReactMarkdown>{post.body}</ReactMarkdown>
+        <ReactMarkdown
+          components={{
+            code({ inline, className, children, ...props }) {
+              const match = /language-(\w+)/.exec(className || '')
+
+              return !inline && match ? (
+                <SyntaxHighlighter
+                  style={dracula}
+                  language={match[1]}
+                  PreTag="div"
+                >
+                  {String(children).replace(/\n$/, '')}
+                </SyntaxHighlighter>
+              ) : (
+                <code className={className} {...props}>
+                  {children}
+                </code>
+              )
+            },
+          }}
+        >
+          {post.body}
+        </ReactMarkdown>
       </PostContent>
     </PostContainer>
   )
