@@ -24,23 +24,22 @@ export const LinesEffectRight = styled(LinesEffectBase)`
   right: 0;
 `
 
-interface BlueEffectProps {
-  top?: number
-  left?: number
-  right?: number
-  bottom?: number
+interface BlurEffectProps {
+  $top?: number
+  $left?: number
+  $right?: number
+  $bottom?: number
 }
 
-export const BlurEffect = styled.div<BlueEffectProps>`
+export const BlurEffect = styled.div<BlurEffectProps>`
   width: 200px;
   height: 200px;
-  filter: blur(200px);
-
   background: #14589c;
-  position: absolute;
+  filter: blur(150px);
 
-  right: ${(props) => props.right && `${props.right}px`};
-  left: ${(props) => props.left && `${props.left}px`};
-  top: ${(props) => props.top && `${props.top}px`};
-  bottom: ${(props) => props.bottom && `${props.bottom}px`};
+  position: absolute;
+  top: ${(props) => props.$top && `${props.$top}px`};
+  left: ${(props) => props.$left && `${props.$left}px`};
+  bottom: ${(props) => props.$bottom && `${props.$bottom}px`};
+  right: ${(props) => props.$right && `${props.$right}px`};
 `
