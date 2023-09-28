@@ -38,7 +38,7 @@ export function AuthorCard() {
       <div>
         <AuthorCardHeader>
           <h1>{author.name}</h1>
-          <GitHubLink content="GitHub" />
+          <GitHubLink href={author.html_url} content="GitHub" />
         </AuthorCardHeader>
         <p>{author.bio}</p>
         <AuthorCardInfo>
