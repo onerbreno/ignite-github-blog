@@ -6,7 +6,7 @@
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-execute">Executar projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-execute-o-projeto-localmente">Executar projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
 </p>
 
@@ -30,6 +30,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
   - React Router Dom
   - React Markdown
 - [Typescript](https://www.typescriptlang.org/)
+- [Vite
+- ](https://www.typescriptlang.org/)
 - [Axios](https://axios-http.com/ptbr/)
 - [Date-fns](https://date-fns.org/)
 
@@ -49,7 +51,7 @@ Você pode visualizar o layout do projeto através [desse link](https://www.figm
 
 ```sh
 # Clone o repositório do projeto
-git clone HTTTPS-or-SSH-URL
+git clone HTTPS-or-SSH-URL
 
 # Acesse a pasta do projeto
 cd ignite-github-blog
