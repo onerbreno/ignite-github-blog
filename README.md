@@ -45,7 +45,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/community/file/1138814951106121051). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
 
-## Execute o projeto
+## Execute o projeto localmente
 
 ```sh
 #clone project repository
