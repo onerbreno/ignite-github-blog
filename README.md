@@ -6,7 +6,7 @@
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#computer-execute">Executar projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-execute">Executar projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
 </p>
 
@@ -45,24 +45,23 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/community/file/1138814951106121051). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
-
-## :computer: Execute o projeto localmente
+## 💻 Execute o projeto localmente
 
 ```sh
-#clone project repository
+# Clone o repositório do projeto
 git clone HTTTPS-or-SSH-URL
 
-#go to project folder
+# Acesse a pasta do projeto
 cd ignite-github-blog
 
-#install dependencies
+# Instale as dependências
 npm install
-#OR
+# OU
 yarn
 
-#start project developer mode
+# Inicie o projeto em modo de desenvolvimento
 npm run dev
-#OR
+# OU
 yarn dev
 ```
 ---
