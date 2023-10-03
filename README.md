@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="Github Blog logo" title="Letmeask" src=".github/github-blog.svg" />
+  <img alt="GitHub Blog logo" title="GitHub Blog" src=".github/github-blog.svg" />
 </h1>
 
 <p align="center">
@@ -17,7 +17,7 @@
 <br>
 
 <p align="center">
-  <img alt="Github Blog gif" src=".github/github-blog.gif" width="100%">
+  <img alt="GitHub Blog gif" src=".github/github-blog.gif" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -30,8 +30,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
   - React Router Dom
   - React Markdown
 - [Typescript](https://www.typescriptlang.org/)
-- [Vite
-- ](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
 - [Axios](https://axios-http.com/ptbr/)
 - [Date-fns](https://date-fns.org/)
 
